@@ -1,24 +1,25 @@
 # Structure
 
 ```text
-hydrology_probability/
+hydrology_statistics_lab/
 │
 ├── data/
-│   └── annual_peak_flow.csv
-│
-├── docs/
-│   └── problem_statement.md
+│   ├── annual_peak_flow.csv
+│   ├── rainfall.csv
+│   ├── groundwater_levels.csv
+│   └── pump_failures.csv
 │
 ├── src/
-│   ├── io.py
-│   ├── statistics.py
-│   ├── plotting.py
-│   └── main.py
+│   ├── statistics/
+│   ├── probability/
+│   ├── plotting/
+│   └── io/
 │
-├── tests/
-│
-├── README.md
-└── pyproject.toml
+├── docs/
+│   ├── lesson_01_histograms.md
+│   ├── lesson_02_pdf.md
+│   ├── lesson_03_cdf.md
+│   ├── lesson_04_normal_distribution.md
+│   ├── lesson_05_return_period.md
+│   └── ...
 ```
-
-

@@ -164,3 +164,8 @@ secrets/
 
 # Python version pinning (uv / pyenv — commit .python-version if desired)
 # .python-version
+
+# =============================================================================
+# Data
+# =============================================================================
+data/
