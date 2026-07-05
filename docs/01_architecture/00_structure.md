@@ -1,7 +1,7 @@
 # Structure
 
 ```text
-hydrology_statistics_lab/
+applied_statistics_infrastructure_analytics/
 │
 ├── data/
 │   ├── annual_peak_flow.csv
