@@ -70,13 +70,32 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
     Calculates descriptive statistics for the dataset.
 
     Args:
-        observations (Number of observations):
-            r
-        Mean
-        Median
-        Minimum
-        Maximum
-        Range
-        Standard deviation
+       df:
+            Pandas DataFrame with year and peak flow.
+
+    Raises:
+        TypeError:
+            If the input is not a Pandas Dataframe
+        ValueError:
+            If the Pandas DataFrame is empty.
+
+    Returns:
+        A dictionary with the following values:
+            observations:
+                Provides the number of observations in the dataset
+            mean
+                Arithmetic mean of the data
+            median
+                The median (middle) value in the dataset
+            minimum
+                The minimum value in the dataset
+            maximum
+                The maximum value in the dataset
+            range
+                The difference between the maximum and minimum.
+            variance
+                Average of the squared distances of the observations from the mean.
+            std_dev
+                The standard deviation, which is the square root of the variance.
     """
     pass
