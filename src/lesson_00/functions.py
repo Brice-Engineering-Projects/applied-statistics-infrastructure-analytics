@@ -64,3 +64,19 @@ def load_data(data: str | Path) -> pd.DataFrame:
     print("Dataset has been loaded as a Pandas Dataframe")
 
     return dataset
+
+def descriptive_statistics(df:pd.DataFrame) -> dict:
+    """
+    Calculates descriptive statistics for the dataset.
+
+    Args:
+        observations (Number of observations):
+            r
+        Mean
+        Median
+        Minimum
+        Maximum
+        Range
+        Standard deviation
+    """
+    pass
