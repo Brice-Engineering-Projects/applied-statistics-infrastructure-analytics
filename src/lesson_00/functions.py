@@ -106,13 +106,13 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
 
     flow = df["peak_flow_cfs"]
     observations = df.shape[0]
-    sample_mean = flow.mean()
-    sample_median = flow.median()
-    sample_max = flow.max()
-    sample_min = flow.min()
-    sample_range = sample_max - sample_min
-    sample_variance = flow.var()
-    sample_standard_deviation = flow.std()
+    sample_mean = float(flow.mean())
+    sample_median = float(flow.median())
+    sample_max = int(flow.max())
+    sample_min = int(flow.min())
+    sample_range = int(sample_max - sample_min)
+    sample_variance = float(flow.var())
+    sample_standard_deviation = float(flow.std())
 
     summary = {
         "observations": observations,
