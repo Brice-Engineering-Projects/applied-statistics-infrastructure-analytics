@@ -104,4 +104,12 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
     if df.empty:
         raise ValueError("Dataframe must contain values.")
 
+    flow = df["peak_flow_cfs"]
     observations = df.shape[0]
+    sample_mean = flow.mean()
+    sample_median = flow.median()
+    sample_max = flow.max()
+    sample_min = flow.min()
+    sample_range = sample_max - sample_min
+    sample_variance = flow.var()
+    sample_standard_deviation = flow.std()
