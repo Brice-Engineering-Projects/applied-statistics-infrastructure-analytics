@@ -71,7 +71,7 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
 
     Args:
        df:
-            Pandas DataFrame with year and peak flow.
+            A pandas DataFrame containing a numeric dataset.
 
     Raises:
         TypeError:
@@ -98,4 +98,10 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
             std_dev
                 The standard deviation, which is the square root of the variance.
     """
-    pass
+    # Error handling
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("Passed argument must be a Pandas DataFrame.")
+    if df.empty:
+        raise ValueError("Dataframe must contain values.")
+
+    observations = df.shape[0]
