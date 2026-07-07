@@ -113,3 +113,16 @@ def descriptive_statistics(df:pd.DataFrame) -> dict:
     sample_range = sample_max - sample_min
     sample_variance = flow.var()
     sample_standard_deviation = flow.std()
+
+    summary = {
+        "observations": observations,
+        "sample_mean": sample_mean,
+        "sample_median": sample_median,
+        "sample_max": sample_max,
+        "sample_min": sample_min,
+        "sample_range": sample_range,
+        "sample_variance": sample_variance,
+        "sample_standard_deviation": sample_standard_deviation,
+    }
+
+    return summary
