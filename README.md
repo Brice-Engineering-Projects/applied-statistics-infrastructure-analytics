@@ -1,4 +1,4 @@
-# Engineering Statistics with Python
+# Applied Infrastructure Analytics
 
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
@@ -13,7 +13,7 @@
 
 ## Overview
 
-**Engineering Statistics with Python** is a hands-on learning project that teaches statistics, probability, and data analysis through realistic civil and environmental engineering datasets.
+**Applied Infrastructure Analytics** is a hands-on learning project that teaches statistics, probability, and data analysis through realistic civil and environmental engineering datasets.
 
 Rather than relying on traditional textbook examples, this repository uses engineering scenarios involving hydrology, water distribution systems, wastewater collection systems, infrastructure reliability, and asset management.
 

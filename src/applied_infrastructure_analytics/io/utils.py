@@ -1,0 +1,68 @@
+
+
+import pandas as pd
+import numpy as np
+from pathlib import Path
+
+
+def descriptive_statistics(df:pd.DataFrame) -> dict:
+    """
+    Calculates descriptive statistics for the dataset.
+
+    Args:
+       df:
+            A pandas DataFrame containing a numeric dataset.
+
+    Raises:
+        TypeError:
+            If the input is not a Pandas Dataframe
+        ValueError:
+            If the Pandas DataFrame is empty.
+
+    Returns:
+        A dictionary with the following values:
+            observations:
+                Provides the number of observations in the dataset
+            mean
+                Arithmetic mean of the data
+            median
+                The median (middle) value in the dataset
+            minimum
+                The minimum value in the dataset
+            maximum
+                The maximum value in the dataset
+            range
+                The difference between the maximum and minimum.
+            variance
+                Average of the squared distances of the observations from the mean.
+            std_dev
+                The standard deviation, which is the square root of the variance.
+    """
+    # Error handling
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("Passed argument must be a Pandas DataFrame.")
+    if df.empty:
+        raise ValueError("Dataframe must contain values.")
+
+    flow = df["peak_flow_cfs"]
+    observations = df.shape[0]
+    sample_mean = float(flow.mean())
+    sample_median = float(flow.median())
+    sample_max = int(flow.max())
+    sample_min = int(flow.min())
+    sample_range = int(sample_max - sample_min)
+    sample_variance = float(flow.var())
+    sample_standard_deviation = float(flow.std())
+
+    summary = {
+        "observations": observations,
+        "sample_mean": sample_mean,
+        "sample_median": sample_median,
+        "sample_max": sample_max,
+        "sample_min": sample_min,
+        "sample_range": sample_range,
+        "sample_variance": sample_variance,
+        "sample_standard_deviation": sample_standard_deviation,
+    }
+
+    return summary
